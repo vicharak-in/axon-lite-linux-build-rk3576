@@ -138,11 +138,11 @@ actions:
     command: echo "LANG=en_US.UTF-8" > /etc/default/locale
 
   - action: run
-    description: Add default user "user" with password "user"
+    description: Add default user "vicharak" with password "12345"
     chroot: true
-    command: useradd -s /bin/bash -F -m user &&
-             echo "user:user" | chpasswd &&
-             gpasswd -a user sudo
+    command: useradd -s /bin/bash -F -m vicharak &&
+             echo "vicharak:12345" | chpasswd &&
+             gpasswd -a vicharak sudo
 
   - action: run
     description: Add dedicated "flipctl" user
